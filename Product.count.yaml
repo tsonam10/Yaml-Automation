@@ -1,0 +1,20 @@
+SQL: |
+  select 
+  product_name, 
+  country, 
+  count(product_id) as total_product_purchased
+  from product_purchased 
+  where category='Sneakers'
+  product_name is not null;
+
+REQUENCY: Monthly
+SFTP:
+  enabled: true
+  test_folder: JOHNBB
+  production_folder: JOHNBB
+  hostname: px.vl
+  port: 22
+  username: sneaker_heads
+OUTPUT_FILE:
+  name_prefix: Monthly_Sneaker_Purchased_
+  format: CSV

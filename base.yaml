@@ -1,0 +1,20 @@
+SQL: |
+  select 
+  product_name, 
+  country, 
+  count(product_id) as total_product_purchased
+  from product_purchased 
+  where category='{category}'
+  product_name is not null;
+
+REQUENCY: {FREQUENCY}
+SFTP:
+  enabled: {enabled}
+  test_folder: {test_folder}
+  production_folder: {production_folder}
+  hostname: {hostname}
+  port: {port}
+  username: {username}
+OUTPUT_FILE:
+  name_prefix: {name_prefix}
+  format: {format}
